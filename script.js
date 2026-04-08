@@ -1,4 +1,5 @@
-tailwind.config = {
+window.tailwind = window.tailwind || {};
+window.tailwind.config = {
   darkMode: "class",
   theme: {
     extend: {
@@ -107,6 +108,59 @@ document.addEventListener('DOMContentLoaded', () => {
                 top: 0,
                 behavior: 'smooth'
             });
+        });
+    }
+
+    // Project image modal (BookVista + Moro Home Deco)
+    const modal = document.getElementById('image-modal');
+    const modalImage = document.getElementById('image-modal-content');
+    const modalClose = document.getElementById('image-modal-close');
+    const imageTriggers = document.querySelectorAll('[data-image-modal-trigger="true"]');
+
+    if (modal && modalImage && modalClose && imageTriggers.length > 0) {
+        modal.style.display = 'none';
+
+        const openModal = (src, altText) => {
+            modalImage.src = src;
+            modalImage.alt = altText || 'Imagen ampliada del proyecto';
+            modal.style.display = 'flex';
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('overflow-hidden');
+        };
+
+        const closeModal = () => {
+            modal.style.display = 'none';
+            modal.setAttribute('aria-hidden', 'true');
+            modalImage.src = '';
+            modalImage.alt = '';
+            document.body.classList.remove('overflow-hidden');
+        };
+
+        imageTriggers.forEach((img) => {
+            img.addEventListener('click', () => {
+                openModal(img.src, img.alt);
+            });
+
+            img.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openModal(img.src, img.alt);
+                }
+            });
+        });
+
+        modalClose.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.style.display !== 'none') {
+                closeModal();
+            }
         });
     }
 });
