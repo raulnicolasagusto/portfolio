@@ -6,6 +6,9 @@
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Raul Nicolas, Agusto | Portfolio</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='32' fill='%23D4F06D'/><text x='32' y='40' font-family='Epilogue, sans-serif' font-size='28' font-weight='900' text-anchor='middle' fill='%23000000'>RA</text></svg>" />
   <meta name="description"
     content="Portfolio de Raul Nicolas Agusto - Diseñador multidisciplinar y desarrollador creativo enfocado en experiencias digitales premium y brutalistas." />
   <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -387,22 +390,33 @@
           class="text-6xl md:text-[140px] font-headline font-black tracking-tighter uppercase text-white leading-none">
           CONECTEMOS</h2>
         <div class="max-w-2xl mx-auto pt-12">
-          <form class="space-y-8 text-left">
+          <form action="https://formspree.io/f/mojpoaej" method="POST" class="space-y-8 text-left">
             <div class="group">
               <label
                 class="block text-xs font-headline font-bold uppercase tracking-widest text-white/40 mb-4 group-focus-within:text-[#D4F06D] transition-colors">Tu
                 Nombre</label>
               <input
+                name="name"
                 class="w-full bg-transparent border-b-2 border-white/10 focus:border-[#D4F06D] py-4 outline-none transition-colors text-xl font-body placeholder:text-white/10"
-                placeholder="Escribe aquí..." type="text" />
+                placeholder="Escribe aquí..." type="text" required />
             </div>
             <div class="group">
               <label
                 class="block text-xs font-headline font-bold uppercase tracking-widest text-white/40 mb-4 group-focus-within:text-[#D4F06D] transition-colors">Email
                 de contacto</label>
               <input
+                name="email"
                 class="w-full bg-transparent border-b-2 border-white/10 focus:border-[#D4F06D] py-4 outline-none transition-colors text-xl font-body placeholder:text-white/10"
-                placeholder="hola@ejemplo.com" type="email" />
+                placeholder="hola@ejemplo.com" type="email" required />
+            </div>
+            <div class="group">
+              <label
+                class="block text-xs font-headline font-bold uppercase tracking-widest text-white/40 mb-4 group-focus-within:text-[#D4F06D] transition-colors">Mensaje</label>
+              <textarea
+                name="message"
+                class="w-full bg-transparent border-b-2 border-white/10 focus:border-[#D4F06D] py-4 outline-none transition-colors text-xl font-body placeholder:text-white/10 resize-none"
+                placeholder="Contame tu proyecto o idea..."
+                rows="4"></textarea>
             </div>
             <button
               class="w-full py-8 bg-[#D4F06D] text-on-primary-container font-headline font-black uppercase text-2xl tracking-tighter hover:scale-[1.01] active:scale-[0.98] transition-all rounded-lg flex items-center justify-center gap-4 group"
@@ -423,15 +437,15 @@
       <span class="font-headline text-sm tracking-widest uppercase text-white/40">
         © 2026 RAUL NICOLAS, AGUSTO.
       </span>
-      <div class="flex gap-12">
-        <a class="font-headline text-sm tracking-widest uppercase text-white/40 hover:text-[#D4F06D] underline decoration-2 underline-offset-8 transition-all duration-300"
-          href="#">LinkedIn</a>
-        <a class="font-headline text-sm tracking-widest uppercase text-white/40 hover:text-[#D4F06D] underline decoration-2 underline-offset-8 transition-all duration-300"
-          href="#">GitHub</a>
-        <a class="font-headline text-sm tracking-widest uppercase text-white/40 hover:text-[#D4F06D] underline decoration-2 underline-offset-8 transition-all duration-300"
-          href="#">Instagram</a>
-        <a class="font-headline text-sm tracking-widest uppercase text-white/40 hover:text-[#D4F06D] underline decoration-2 underline-offset-8 transition-all duration-300"
-          href="#">Read.cv</a>
+      <div class="flex gap-8 items-center">
+        <a class="flex items-center gap-3 group" href="https://www.linkedin.com/in/raulnicolasagusto" target="_blank" rel="noopener noreferrer">
+          <img src="assets/redes/linkedin.png" alt="LinkedIn" class="w-6 h-6 grayscale group-hover:grayscale-0 transition-all duration-300" />
+          <span class="font-headline text-sm tracking-widest uppercase text-white/40 group-hover:text-[#D4F06D] transition-all duration-300">LinkedIn</span>
+        </a>
+        <a class="flex items-center gap-3 group" href="https://github.com/raulnicolasagusto" target="_blank" rel="noopener noreferrer">
+          <img src="assets/redes/github.png" alt="GitHub" class="w-6 h-6 grayscale group-hover:grayscale-0 transition-all duration-300" />
+          <span class="font-headline text-sm tracking-widest uppercase text-white/40 group-hover:text-[#D4F06D] transition-all duration-300">GitHub</span>
+        </a>
       </div>
     </div>
   </footer>
