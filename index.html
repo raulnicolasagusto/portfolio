@@ -443,32 +443,25 @@
           class="text-6xl md:text-[140px] font-headline font-black tracking-tighter uppercase text-white leading-none">
           CONECTEMOS</h2>
         <div class="max-w-2xl mx-auto pt-12">
-          <form action="https://formspree.io/f/mojpoaej" method="POST" class="space-y-8 text-left">
+          <form id="contact-form" action="https://formspree.io/f/mojpoaej" method="POST" class="space-y-8 text-left">
             <div class="group">
-              <label
-                class="block text-xs font-headline font-bold uppercase tracking-widest text-white/40 mb-4 group-focus-within:text-[#D4F06D] transition-colors">Tu
-                Nombre</label>
               <input
                 name="name"
-                class="w-full bg-transparent border-b-2 border-white/10 focus:border-[#D4F06D] py-4 outline-none transition-colors text-xl font-body placeholder:text-white/10"
-                placeholder="Escribe aquí..." type="text" required />
+                class="w-full bg-surface-container border-b-2 border-white/10 focus:border-[#D4F06D] py-4 px-4 outline-none transition-colors text-xl font-body text-white placeholder:text-white/20 rounded-t-lg"
+                placeholder="Tu nombre" type="text" required />
             </div>
             <div class="group">
-              <label
-                class="block text-xs font-headline font-bold uppercase tracking-widest text-white/40 mb-4 group-focus-within:text-[#D4F06D] transition-colors">Email
-                de contacto</label>
               <input
                 name="email"
-                class="w-full bg-transparent border-b-2 border-white/10 focus:border-[#D4F06D] py-4 outline-none transition-colors text-xl font-body placeholder:text-white/10"
-                placeholder="hola@ejemplo.com" type="email" required />
+                class="w-full bg-surface-container border-b-2 border-white/10 focus:border-[#D4F06D] py-4 px-4 outline-none transition-colors text-xl font-body text-white placeholder:text-white/20 rounded-t-lg"
+                placeholder="Email de contacto" type="email" required />
             </div>
             <div class="group">
-              <label
-                class="block text-xs font-headline font-bold uppercase tracking-widest text-white/40 mb-4 group-focus-within:text-[#D4F06D] transition-colors">Mensaje</label>
               <textarea
                 name="message"
-                class="w-full bg-transparent border-b-2 border-white/10 focus:border-[#D4F06D] py-4 outline-none transition-colors text-xl font-body placeholder:text-white/10 resize-none"
+                class="w-full bg-surface-container border-b-2 border-white/10 focus:border-[#D4F06D] py-4 px-4 outline-none transition-colors text-xl font-body text-white placeholder:text-white/20 resize-none rounded-t-lg"
                 placeholder="Contame tu proyecto o idea..."
+                required
                 rows="4"></textarea>
             </div>
             <button
@@ -513,6 +506,7 @@
       <img id="image-modal-content" class="w-full max-h-[85vh] object-contain rounded-lg bg-surface-container" alt="" />
     </div>
   </div>
+<div id="toast" aria-live="polite"></div>
 </body>
 
 </html>
